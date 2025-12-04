@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вторая страница</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шторка с названием -->
+    <header class="curtain">
+        <div class="curtain-content">
+            <h1>Исходный HTML</h1>
+            <p>На этой странице отображается исходный HTML код сайта</p>
+            
+            <!-- Кнопка перехода на главную страницу -->
+            <a href="index.html" class="page-button">
+                <i class="fas fa-arrow-left"></i> Главная страница
+            </a>
+        </div>
+        
+        <!-- Декоративный элемент -->
+        <div class="curtain-bottom"></div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="content">
+        <h2>Исходный HTML код главной страницы</h2>
+        <p class="subtitle">Ниже представлен код, использованный для создания главной страницы этого сайта</p>
+        
+        <!-- Контейнер для исходного кода -->
+        <div class="code-container">
+            <div class="code-header">
+                <h3>index.html</h3>
+                <button class="copy-button" onclick="copyCode()">
+                    <i class="far fa-copy"></i> Копировать
+                </button>
+            </div>
+            <pre><code class="html-code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Главная страница&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header class="curtain"&gt;
+        &lt;div class="curtain-content"&gt;
+            &lt;h1&gt;Мой сайт&lt;/h1&gt;
+            &lt;p&gt;Простой и элегантный дизайн&lt;/p&gt;
+            &lt;a href="second-page.html" class="page-button"&gt;
+                Вторая страница
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main class="content"&gt;
+        &lt;h2&gt;Моя коллекция изображений&lt;/h2&gt;
+        &lt;div class="image-grid"&gt;
+            &lt;div class="image-item"&gt;
+                &lt;img src="image1.jpg" alt="Описание"&gt;
+                &lt;div class="image-text"&gt;
+                    &lt;h3&gt;Заголовок 1&lt;/h3&gt;
+                    &lt;p&gt;Описание изображения&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- Еще 4 аналогичных блока --&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;Простой двустраничный сайт &copy; 2023&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </div>
+        
+        <!-- Контейнер для CSS кода -->
+        <div class="code-container">
+            <div class="code-header">
+                <h3>style.css</h3>
+                <button class="copy-button" onclick="copyCssCode()">
+                    <i class="far fa-copy"></i> Копировать
+                </button>
+            </div>
+            <pre><code class="css-code">
+/* Основные стили */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.curtain {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 60px 20px 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.curtain h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.page-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Другие стили... */
+            </code></pre>
+        </div>
+        
+        <!-- Описание -->
+        <div class="code-description">
+            <h3>О структуре сайта</h3>
+            <p>Этот сайт состоит из двух страниц, связанных между собой кнопками навигации. Главная страница содержит "шторку" с названием и галерею изображений. Вторая страница отображает исходный код сайта.</p>
+            <p>Сайт полностью адаптивен и корректно отображается на всех устройствах.</p>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <p>Простой двустраничный сайт &copy; 2023</p>
+    </footer>
+
+    <script>
+        // Функция для копирования HTML кода
+        function copyCode() {
+            const code = document.querySelector('.html-code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('HTML код скопирован в буфер обмена!');
+            });
+        }
+        
+        // Функция для копирования CSS кода
+        function copyCssCode() {
+            const code = document.querySelector('.css-code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('CSS код скопирован в буфер обмена!');
+            });
+        }
+    </script>
+</body>
+</html>
